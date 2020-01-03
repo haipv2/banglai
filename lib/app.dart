@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'page/home_page.dart';
 import 'page/router.dart';
+import 'page/widget/app_bar.dart';
 import 'provider/home_provider.dart';
 
 class App extends StatefulWidget {
@@ -19,10 +20,9 @@ class _AppState extends State<App> {
       theme: ThemeData(primaryColor: Colors.orangeAccent),
 //      initialRoute: 'init',
       onGenerateRoute: Router.generateRoute,
-      home: MultiProvider(
-        providers: [
-        ],
-        child: HomePage(),
+      home: Scaffold(
+        appBar: CustomAppBar(),
+        body: HomePage(),
       ),
     );
   }
