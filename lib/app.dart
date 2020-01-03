@@ -19,11 +19,7 @@ class _AppState extends State<App> {
       theme: ThemeData(primaryColor: Colors.orangeAccent),
 //      initialRoute: 'init',
       onGenerateRoute: Router.generateRoute,
-      home: MultiProvider(
-        providers: [
-        ],
-        child: HomePage(),
-      ),
+      home: HomePage(),
     );
   }
 }
