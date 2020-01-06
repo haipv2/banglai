@@ -17,13 +17,14 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.orangeAccent),
+      theme: ThemeData(
+        primaryColor: const Color(0xFF02BB9F),
+        primaryColorDark: const Color(0xFF167F67),
+        accentColor: const Color(0xFFFFAD32),
+      ),
 //      initialRoute: 'init',
       onGenerateRoute: Router.generateRoute,
-      home: Scaffold(
-        appBar: CustomAppBar(),
-        body: HomePage(),
-      ),
+      home: HomePage(),
     );
   }
 }

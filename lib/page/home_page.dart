@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'boat_page.dart';
 import 'car_page.dart';
 import 'motobike_page.dart';
-import 'widget/app_bar.dart';
-import 'widget/loading_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,10 +19,12 @@ class _HomePageState extends State<HomePage> {
     return DefaultTabController(
         length: 3,
         child: DefaultTabController(
+          initialIndex: 0,
           length: 3,
           child: Scaffold(
             appBar: AppBar(
-              title: Text("Provider Demo"),
+              title: Text("Luật giao thông"),
+              centerTitle: true,
               bottom: TabBar(
                 tabs: [
                   Tab(icon: Icon(Icons.motorcycle)),
